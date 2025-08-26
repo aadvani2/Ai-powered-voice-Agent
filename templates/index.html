@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Smile Dental Care - AI Voice Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-tooth"></i>
+                <h1>Bright Smile Dental Care</h1>
+            </div>
+            <p class="subtitle">AI-Powered Voice Assistant</p>
+        </header>
+
+        <main class="main-content">
+            <div class="voice-interface">
+                <div class="voice-button-container">
+                    <button id="voiceButton" class="voice-button">
+                        <i class="fas fa-microphone"></i>
+                        <span>Click to Speak</span>
+                    </button>
+                    <div class="voice-status" id="voiceStatus">
+                        <div class="pulse-ring"></div>
+                    </div>
+                </div>
+                
+                <div class="input-section">
+                    <div class="text-input-container">
+                        <input type="text" id="textInput" placeholder="Or type your question here..." class="text-input">
+                        <button id="sendButton" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conversation-container">
+                <div class="conversation-header">
+                    <h3>Conversation</h3>
+                    <button id="clearChat" class="clear-button">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+                <div id="conversation" class="conversation">
+                    <div class="message assistant">
+                        <div class="message-content">
+                            <i class="fas fa-robot"></i>
+                            <p>Hello! I'm your AI dental assistant. I can help you with:</p>
+                            <ul>
+                                <li>📅 Scheduling appointments</li>
+                                <li>🏥 Insurance questions</li>
+                                <li>🦷 Service information</li>
+                                <li>⏰ Office hours</li>
+                            </ul>
+                            <p>Just click the microphone button and ask me anything!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button class="action-btn" data-query="What are your office hours?">
+                        <i class="fas fa-clock"></i>
+                        Office Hours
+                    </button>
+                    <button class="action-btn" data-query="What insurance do you accept?">
+                        <i class="fas fa-shield-alt"></i>
+                        Insurance
+                    </button>
+                    <button class="action-btn" data-query="What services do you offer?">
+                        <i class="fas fa-list"></i>
+                        Services
+                    </button>
+                    <button class="action-btn" data-query="I need to schedule an appointment">
+                        <i class="fas fa-calendar-plus"></i>
+                        Book Appointment
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="practice-info">
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(555) 123-4567</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Main Street, Anytown, CA 90210</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

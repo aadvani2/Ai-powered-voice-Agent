@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Practice Dashboard - Bright Smile Dental Care</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-tooth"></i>
+                    <h2>Bright Smile</h2>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#patients">
+                            <i class="fas fa-users"></i>
+                            <span>Patients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#appointments">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Appointments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#billing">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Billing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reports">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#voice-assistant">
+                            <i class="fas fa-microphone"></i>
+                            <span>Voice Assistant</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's what's happening today.</p>
+                </div>
+                <div class="header-right">
+                    <div class="date-time">
+                        <i class="fas fa-clock"></i>
+                        <span id="current-time"></span>
+                    </div>
+                    <div class="user-menu">
+                        <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="User Avatar">
+                        <span>Dr. Smith</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Quick Stats -->
+                <section class="quick-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-patients">0</h3>
+                            <p>Total Patients</p>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+12%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="today-appointments">0</h3>
+                            <p>Today's Appointments</p>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+5%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="monthly-revenue">$0</h3>
+                            <p>Monthly Revenue</p>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+8%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="pending-appointments">0</h3>
+                            <p>Pending Appointments</p>
+                        </div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>-3%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Charts Section -->
+                <section class="charts-section">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Appointment Trends</h3>
+                            <div class="chart-controls">
+                                <select id="appointment-chart-period">
+                                    <option value="7">Last 7 Days</option>
+                                    <option value="30" selected>Last 30 Days</option>
+                                    <option value="90">Last 90 Days</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="appointment-chart"></canvas>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Revenue Overview</h3>
+                            <div class="chart-controls">
+                                <select id="revenue-chart-period">
+                                    <option value="7">Last 7 Days</option>
+                                    <option value="30" selected>Last 30 Days</option>
+                                    <option value="90">Last 90 Days</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="revenue-chart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="recent-activity">
+                    <div class="activity-section">
+                        <div class="section-header">
+                            <h3>Today's Appointments</h3>
+                            <a href="#appointments" class="view-all">View All</a>
+                        </div>
+                        <div class="activity-list" id="today-appointments-list">
+                            <!-- Appointments will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="activity-section">
+                        <div class="section-header">
+                            <h3>Recent Patients</h3>
+                            <a href="#patients" class="view-all">View All</a>
+                        </div>
+                        <div class="activity-list" id="recent-patients-list">
+                            <!-- Patients will be loaded here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Voice Assistant Widget -->
+                <section class="voice-assistant-widget">
+                    <div class="widget-header">
+                        <h3>Voice Assistant</h3>
+                        <div class="voice-status">
+                            <span class="status-indicator" id="voice-status">Ready</span>
+                        </div>
+                    </div>
+                    <div class="voice-controls">
+                        <button class="voice-btn" id="voice-btn">
+                            <i class="fas fa-microphone"></i>
+                            <span>Start Voice Assistant</span>
+                        </button>
+                        <div class="voice-transcript" id="voice-transcript">
+                            <p>Click the microphone to start voice interaction...</p>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <h4>Quick Actions</h4>
+                        <div class="action-buttons">
+                            <button class="action-btn" data-action="schedule-appointment">
+                                <i class="fas fa-calendar-plus"></i>
+                                Schedule Appointment
+                            </button>
+                            <button class="action-btn" data-action="check-availability">
+                                <i class="fas fa-clock"></i>
+                                Check Availability
+                            </button>
+                            <button class="action-btn" data-action="patient-lookup">
+                                <i class="fas fa-search"></i>
+                                Patient Lookup
+                            </button>
+                            <button class="action-btn" data-action="insurance-check">
+                                <i class="fas fa-shield-alt"></i>
+                                Insurance Check
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="appointment-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Schedule Appointment</h3>
+                <button class="close-btn" id="close-appointment-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <label for="patient-select">Patient</label>
+                        <select id="patient-select" required>
+                            <option value="">Select Patient</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-type">Appointment Type</label>
+                        <select id="appointment-type" required>
+                            <option value="">Select Type</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="filling">Filling</option>
+                            <option value="root_canal">Root Canal</option>
+                            <option value="extraction">Extraction</option>
+                            <option value="whitening">Whitening</option>
+                            <option value="implant">Implant</option>
+                            <option value="emergency">Emergency</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-date">Date</label>
+                        <input type="date" id="appointment-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-time">Time</label>
+                        <input type="time" id="appointment-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-notes">Notes</label>
+                        <textarea id="appointment-notes" rows="3"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-appointment">Cancel</button>
+                        <button type="submit" class="btn-primary">Schedule Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
