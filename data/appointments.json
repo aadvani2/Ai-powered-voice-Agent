@@ -1,0 +1,72 @@
+{
+  "A0001": {
+    "appointment_id": "A0001",
+    "patient_id": "P0006",
+    "appointment_type": "cleaning",
+    "scheduled_date": "2025-08-28T07:37:07.357089",
+    "duration_minutes": 45,
+    "dentist_id": null,
+    "notes": "Regular cleaning appointment",
+    "status": "scheduled",
+    "created_at": "2025-08-25T21:37:07.357105",
+    "updated_at": "2025-08-25T21:37:07.357106",
+    "reminders_sent": [],
+    "treatment_notes": []
+  },
+  "A0002": {
+    "appointment_id": "A0002",
+    "patient_id": "P0007",
+    "appointment_type": "consultation",
+    "scheduled_date": "2025-08-29T11:37:07.357093",
+    "duration_minutes": 60,
+    "dentist_id": null,
+    "notes": "Annual checkup",
+    "status": "scheduled",
+    "created_at": "2025-08-25T21:37:07.357221",
+    "updated_at": "2025-08-25T21:37:07.357222",
+    "reminders_sent": [],
+    "treatment_notes": []
+  },
+  "A0003": {
+    "appointment_id": "A0003",
+    "patient_id": "P0008",
+    "appointment_type": "filling",
+    "scheduled_date": "2025-08-27T06:37:07.357095",
+    "duration_minutes": 60,
+    "dentist_id": null,
+    "notes": "Cavity filling on tooth #14",
+    "status": "scheduled",
+    "created_at": "2025-08-25T21:37:07.357325",
+    "updated_at": "2025-08-25T21:37:07.357326",
+    "reminders_sent": [],
+    "treatment_notes": []
+  },
+  "A0004": {
+    "appointment_id": "A0004",
+    "patient_id": "P0009",
+    "appointment_type": "whitening",
+    "scheduled_date": "2025-08-31T08:37:07.357096",
+    "duration_minutes": 90,
+    "dentist_id": null,
+    "notes": "Teeth whitening treatment",
+    "status": "scheduled",
+    "created_at": "2025-08-25T21:37:07.357434",
+    "updated_at": "2025-08-25T21:37:07.357434",
+    "reminders_sent": [],
+    "treatment_notes": []
+  },
+  "A0005": {
+    "appointment_id": "A0005",
+    "patient_id": "P0010",
+    "appointment_type": "emergency",
+    "scheduled_date": "2025-08-25T23:37:07.357098",
+    "duration_minutes": 30,
+    "dentist_id": null,
+    "notes": "Emergency consultation - tooth pain",
+    "status": "scheduled",
+    "created_at": "2025-08-25T21:37:07.357556",
+    "updated_at": "2025-08-25T21:37:07.357557",
+    "reminders_sent": [],
+    "treatment_notes": []
+  }
+}

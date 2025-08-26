@@ -183,8 +183,17 @@ class DentalVoiceAgent {
     }
 
     speakText(text) {
+        console.log('Attempting to speak text:', text);
+        
         if (this.isSpeaking) {
+            console.log('Cancelling previous speech');
             this.synthesis.cancel();
+        }
+
+        // Check if speech synthesis is available
+        if (!this.synthesis) {
+            console.error('Speech synthesis not available');
+            return;
         }
 
         const utterance = new SpeechSynthesisUtterance(text);
@@ -193,10 +202,12 @@ class DentalVoiceAgent {
         utterance.volume = 0.8;
         
         utterance.onstart = () => {
+            console.log('Speech started');
             this.isSpeaking = true;
         };
         
         utterance.onend = () => {
+            console.log('Speech ended');
             this.isSpeaking = false;
         };
         
@@ -205,6 +216,7 @@ class DentalVoiceAgent {
             this.isSpeaking = false;
         };
         
+        console.log('Starting speech synthesis...');
         this.synthesis.speak(utterance);
     }
 

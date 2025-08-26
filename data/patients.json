@@ -1,0 +1,294 @@
+{
+  "P0001": {
+    "patient_id": "P0001",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "john.smith@email.com",
+    "phone": "(555) 123-4567",
+    "date_of_birth": "1985-03-15",
+    "insurance_provider": "Delta Dental",
+    "insurance_id": "DD123456789",
+    "created_at": "2025-08-25T21:36:53.173731",
+    "updated_at": "2025-08-25T21:36:53.173738",
+    "medical_history": [],
+    "appointments": [],
+    "treatments": [],
+    "notes": []
+  },
+  "P0002": {
+    "patient_id": "P0002",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "sarah.johnson@email.com",
+    "phone": "(555) 234-5678",
+    "date_of_birth": "1990-07-22",
+    "insurance_provider": "Aetna",
+    "insurance_id": "AE987654321",
+    "created_at": "2025-08-25T21:36:53.173889",
+    "updated_at": "2025-08-25T21:36:53.173890",
+    "medical_history": [],
+    "appointments": [],
+    "treatments": [],
+    "notes": []
+  },
+  "P0003": {
+    "patient_id": "P0003",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "michael.brown@email.com",
+    "phone": "(555) 345-6789",
+    "date_of_birth": "1978-11-08",
+    "insurance_provider": "Cigna",
+    "insurance_id": "CG456789123",
+    "created_at": "2025-08-25T21:36:53.174018",
+    "updated_at": "2025-08-25T21:36:53.174019",
+    "medical_history": [],
+    "appointments": [],
+    "treatments": [],
+    "notes": []
+  },
+  "P0004": {
+    "patient_id": "P0004",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "emily.davis@email.com",
+    "phone": "(555) 456-7890",
+    "date_of_birth": "1992-05-14",
+    "insurance_provider": "Blue Cross Blue Shield",
+    "insurance_id": "BC789123456",
+    "created_at": "2025-08-25T21:36:53.174133",
+    "updated_at": "2025-08-25T21:36:53.174134",
+    "medical_history": [],
+    "appointments": [],
+    "treatments": [],
+    "notes": []
+  },
+  "P0005": {
+    "patient_id": "P0005",
+    "first_name": "David",
+    "last_name": "Wilson",
+    "email": "david.wilson@email.com",
+    "phone": "(555) 567-8901",
+    "date_of_birth": "1983-09-30",
+    "insurance_provider": null,
+    "insurance_id": null,
+    "created_at": "2025-08-25T21:36:53.174256",
+    "updated_at": "2025-08-25T21:36:53.174256",
+    "medical_history": [],
+    "appointments": [],
+    "treatments": [],
+    "notes": []
+  },
+  "P0006": {
+    "patient_id": "P0006",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "john.smith@email.com",
+    "phone": "(555) 123-4567",
+    "date_of_birth": "1985-03-15",
+    "insurance_provider": "Delta Dental",
+    "insurance_id": "DD123456789",
+    "created_at": "2025-08-25T21:37:07.355693",
+    "updated_at": "2025-08-25T21:37:07.363906",
+    "medical_history": [
+      {
+        "condition": "Gingivitis",
+        "date": "2023-01-15",
+        "notes": "Mild gum inflammation",
+        "added_at": "2025-08-25T21:37:07.358947"
+      },
+      {
+        "condition": "Cavity",
+        "date": "2023-06-20",
+        "notes": "Small cavity on tooth #12",
+        "added_at": "2025-08-25T21:37:07.359169"
+      }
+    ],
+    "appointments": [],
+    "treatments": [
+      {
+        "treatment_type": "Teeth Cleaning",
+        "date": "2023-01-15",
+        "cost": 120.0,
+        "notes": "Regular cleaning",
+        "added_at": "2025-08-25T21:37:07.361427"
+      },
+      {
+        "treatment_type": "Cavity Filling",
+        "date": "2023-06-20",
+        "cost": 200.0,
+        "notes": "Filling on tooth #12",
+        "added_at": "2025-08-25T21:37:07.361809"
+      }
+    ],
+    "notes": [
+      {
+        "note": "Patient prefers morning appointments",
+        "category": "preference",
+        "added_at": "2025-08-25T21:37:07.363295"
+      },
+      {
+        "note": "Allergic to penicillin",
+        "category": "medical",
+        "added_at": "2025-08-25T21:37:07.363626"
+      },
+      {
+        "note": "Excellent oral hygiene habits",
+        "category": "general",
+        "added_at": "2025-08-25T21:37:07.363904"
+      }
+    ]
+  },
+  "P0007": {
+    "patient_id": "P0007",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "sarah.johnson@email.com",
+    "phone": "(555) 234-5678",
+    "date_of_birth": "1990-07-22",
+    "insurance_provider": "Aetna",
+    "insurance_id": "AE987654321",
+    "created_at": "2025-08-25T21:37:07.355965",
+    "updated_at": "2025-08-25T21:37:07.364744",
+    "medical_history": [
+      {
+        "condition": "Sensitive Teeth",
+        "date": "2023-03-10",
+        "notes": "Cold sensitivity",
+        "added_at": "2025-08-25T21:37:07.359390"
+      },
+      {
+        "condition": "Wisdom Tooth Pain",
+        "date": "2023-08-05",
+        "notes": "Impacted wisdom tooth",
+        "added_at": "2025-08-25T21:37:07.359654"
+      }
+    ],
+    "appointments": [],
+    "treatments": [
+      {
+        "treatment_type": "General Checkup",
+        "date": "2023-03-10",
+        "cost": 150.0,
+        "notes": "Annual checkup",
+        "added_at": "2025-08-25T21:37:07.362094"
+      },
+      {
+        "treatment_type": "Wisdom Tooth Extraction",
+        "date": "2023-08-05",
+        "cost": 500.0,
+        "notes": "Surgical extraction",
+        "added_at": "2025-08-25T21:37:07.362358"
+      }
+    ],
+    "notes": [
+      {
+        "note": "Anxious about dental procedures",
+        "category": "behavioral",
+        "added_at": "2025-08-25T21:37:07.364186"
+      },
+      {
+        "note": "Prefers female dentists",
+        "category": "preference",
+        "added_at": "2025-08-25T21:37:07.364465"
+      },
+      {
+        "note": "Has dental insurance through employer",
+        "category": "insurance",
+        "added_at": "2025-08-25T21:37:07.364742"
+      }
+    ]
+  },
+  "P0008": {
+    "patient_id": "P0008",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "michael.brown@email.com",
+    "phone": "(555) 345-6789",
+    "date_of_birth": "1978-11-08",
+    "insurance_provider": "Cigna",
+    "insurance_id": "CG456789123",
+    "created_at": "2025-08-25T21:37:07.356143",
+    "updated_at": "2025-08-25T21:37:07.365944",
+    "medical_history": [
+      {
+        "condition": "Root Canal",
+        "date": "2022-11-12",
+        "notes": "Root canal on tooth #19",
+        "added_at": "2025-08-25T21:37:07.360155"
+      },
+      {
+        "condition": "Crown Placement",
+        "date": "2023-02-28",
+        "notes": "Crown on tooth #19",
+        "added_at": "2025-08-25T21:37:07.360795"
+      }
+    ],
+    "appointments": [],
+    "treatments": [
+      {
+        "treatment_type": "Root Canal",
+        "date": "2022-11-12",
+        "cost": 800.0,
+        "notes": "Root canal on tooth #19",
+        "added_at": "2025-08-25T21:37:07.362629"
+      },
+      {
+        "treatment_type": "Crown Placement",
+        "date": "2023-02-28",
+        "cost": 1200.0,
+        "notes": "Porcelain crown",
+        "added_at": "2025-08-25T21:37:07.362893"
+      }
+    ],
+    "notes": [
+      {
+        "note": "History of dental anxiety",
+        "category": "behavioral",
+        "added_at": "2025-08-25T21:37:07.365026"
+      },
+      {
+        "note": "Requires sedation for major procedures",
+        "category": "medical",
+        "added_at": "2025-08-25T21:37:07.365385"
+      },
+      {
+        "note": "Has flexible schedule for appointments",
+        "category": "preference",
+        "added_at": "2025-08-25T21:37:07.365941"
+      }
+    ]
+  },
+  "P0009": {
+    "patient_id": "P0009",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "emily.davis@email.com",
+    "phone": "(555) 456-7890",
+    "date_of_birth": "1992-05-14",
+    "insurance_provider": "Blue Cross Blue Shield",
+    "insurance_id": "BC789123456",
+    "created_at": "2025-08-25T21:37:07.356318",
+    "updated_at": "2025-08-25T21:37:07.356319",
+    "medical_history": [],
+    "appointments": [],
+    "treatments": [],
+    "notes": []
+  },
+  "P0010": {
+    "patient_id": "P0010",
+    "first_name": "David",
+    "last_name": "Wilson",
+    "email": "david.wilson@email.com",
+    "phone": "(555) 567-8901",
+    "date_of_birth": "1983-09-30",
+    "insurance_provider": null,
+    "insurance_id": null,
+    "created_at": "2025-08-25T21:37:07.356868",
+    "updated_at": "2025-08-25T21:37:07.356869",
+    "medical_history": [],
+    "appointments": [],
+    "treatments": [],
+    "notes": []
+  }
+}

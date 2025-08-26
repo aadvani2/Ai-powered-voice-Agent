@@ -1,0 +1,107 @@
+{
+  "invoices": {
+    "INV0001": {
+      "invoice_id": "INV0001",
+      "patient_id": "P0006",
+      "appointment_id": "A0001",
+      "created_date": "2025-08-25T21:37:07.357693",
+      "due_date": "2025-09-24T21:37:07.357696",
+      "status": "draft",
+      "items": [
+        {
+          "item_id": "ITEM001",
+          "description": "Teeth Cleaning",
+          "quantity": 1,
+          "unit_price": 120.0,
+          "service_code": null,
+          "total": 120.0
+        },
+        {
+          "item_id": "ITEM002",
+          "description": "X-Ray",
+          "quantity": 1,
+          "unit_price": 50.0,
+          "service_code": null,
+          "total": 50.0
+        }
+      ],
+      "subtotal": 170.0,
+      "tax_rate": 0.08,
+      "tax_amount": 13.6,
+      "total_amount": 183.6,
+      "paid_amount": 0.0,
+      "balance_due": 183.6,
+      "notes": "",
+      "insurance_info": null
+    },
+    "INV0002": {
+      "invoice_id": "INV0002",
+      "patient_id": "P0007",
+      "appointment_id": "A0002",
+      "created_date": "2025-08-25T21:37:07.358046",
+      "due_date": "2025-09-24T21:37:07.358048",
+      "status": "draft",
+      "items": [
+        {
+          "item_id": "ITEM001",
+          "description": "General Checkup",
+          "quantity": 1,
+          "unit_price": 150.0,
+          "service_code": null,
+          "total": 150.0
+        },
+        {
+          "item_id": "ITEM002",
+          "description": "Fluoride Treatment",
+          "quantity": 1,
+          "unit_price": 25.0,
+          "service_code": null,
+          "total": 25.0
+        }
+      ],
+      "subtotal": 175.0,
+      "tax_rate": 0.08,
+      "tax_amount": 14.0,
+      "total_amount": 189.0,
+      "paid_amount": 0.0,
+      "balance_due": 189.0,
+      "notes": "",
+      "insurance_info": null
+    },
+    "INV0003": {
+      "invoice_id": "INV0003",
+      "patient_id": "P0008",
+      "appointment_id": "A0003",
+      "created_date": "2025-08-25T21:37:07.358408",
+      "due_date": "2025-09-24T21:37:07.358410",
+      "status": "draft",
+      "items": [
+        {
+          "item_id": "ITEM001",
+          "description": "Cavity Filling",
+          "quantity": 1,
+          "unit_price": 200.0,
+          "service_code": null,
+          "total": 200.0
+        },
+        {
+          "item_id": "ITEM002",
+          "description": "Local Anesthesia",
+          "quantity": 1,
+          "unit_price": 30.0,
+          "service_code": null,
+          "total": 30.0
+        }
+      ],
+      "subtotal": 230.0,
+      "tax_rate": 0.08,
+      "tax_amount": 18.400000000000002,
+      "total_amount": 248.4,
+      "paid_amount": 0.0,
+      "balance_due": 248.4,
+      "notes": "",
+      "insurance_info": null
+    }
+  },
+  "insurance_claims": {}
+}

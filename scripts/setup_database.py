@@ -97,7 +97,7 @@ def create_sample_appointments(patients: List[Patient]) -> List[Appointment]:
         },
         {
             'patient': patients[1],
-            'appointment_type': AppointmentType.CHECKUP,
+            'appointment_type': AppointmentType.CONSULTATION,
             'scheduled_date': datetime.now() + timedelta(days=3, hours=14),
             'duration_minutes': 60,
             'notes': 'Annual checkup'

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import speech_recognition as sr
@@ -23,9 +26,6 @@ CORS(app)
 # Register blueprints
 app.register_blueprint(patient_api)
 app.register_blueprint(appointment_api)
-
-# Configure OpenAI
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Initialize text-to-speech engine
 try:
@@ -133,6 +133,10 @@ def index():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/voice-test')
+def voice_test():
+    return render_template('voice_test.html')
+
 @app.route('/api/process-voice', methods=['POST'])
 def process_voice():
     """Process voice input and return AI response"""
@@ -192,4 +196,4 @@ def get_insurance_info():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5002)
